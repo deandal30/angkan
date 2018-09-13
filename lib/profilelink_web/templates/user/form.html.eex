@@ -1,0 +1,32 @@
+
+<%= form_for @changeset, @action, fn f -> %>
+<div class="content">
+		<div class="ui left aligned ptb-2">
+			<div class="field">
+				<label>Email</label>
+				<div class="ui left icon input">
+					<i class="mail icon"></i>
+          <%= text_input f, :name, class: "form-control" %>
+          <%= error_tag f, :name %>
+				</div>
+			</div>
+			<div class="field">
+				<label>Password</label>
+				<div class="ui left icon input">
+					<i class="lock icon"></i>
+          <%= number_input f, :password, class: "form-control" %>
+          <%= error_tag f, :password %>
+				</div>
+			</div>
+			<div class="field">
+				<label>Confirm Password</label>
+				<div class="ui left icon input">
+					<i class="lock icon"></i>
+          <%= text_input f, :confirm_password, class: "form-control" %>
+          <%= error_tag f, :confirm_password %>
+				</div>
+			</div>
+			<button class="ui large blue submit button" id="sign-up-button" type="submit">Sign me up</button>
+		</div>
+	</div>
+  <% end %>

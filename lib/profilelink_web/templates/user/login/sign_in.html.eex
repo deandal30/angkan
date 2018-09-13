@@ -1,0 +1,14 @@
+<div class="panel-sign-up hide-on-mobile" id="public">
+  <a href="/sign_up" class="ui blue basic button">
+    Sign up here
+  </a>
+  <span class="mr-2">
+    Don't have an account?
+  </span>
+</div>
+
+<div class="ui large attached form login" role="login">
+<%= render "login/form.html", changeset: @changeset,
+                        action: user_path(@conn, :create) %>
+	
+</div>

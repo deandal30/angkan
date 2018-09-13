@@ -35,7 +35,7 @@ defmodule ProfilelinkWeb.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_profilelink_key",
-    signing_salt: "VTfYmbHe"
+    signing_salt: "OrL6io2/"
 
   plug ProfilelinkWeb.Router
 

@@ -1,35 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+        if (self == top) {
+            document.documentElement.style.display = 'block';
+        } else {
+            top.location = self.location;
+        }
+    </script>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Profilelink!</title>
+    <link rel="shortcut icon" href="<%= static_path(@conn, "/favicon.ico") %>" type="image/x-icon">
+    <link rel="icon" href="<%= static_path(@conn, "/favicon.ico") %>" type="image/x-icon">
+
+    <title>ANGKAN</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/components.css") %>">
+    
   </head>
 
-  <body>
-    <div class="container">
-      <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
-          </ul>
-        </nav>
-        <span class="logo"></span>
-      </header>
+  <body class="pushable">
 
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+<!-- Following Menu -->
+<div class="ui large top fixed menu transition hidden">
+  <div class="ui container">
+    <a href="#" class="header item">
+      <img class="logo" src="<%= static_path(@conn, "/images/logo.png") %>">
+      ANGKAN
+    </a>
+    <div class="right menu">
+      <div class="item">
+        <a class="ui button" href="/sign_in">Log in</a>
+      </div>
+      <div class="item">
+        <a class="ui primary button">Sign Up</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-      <main role="main">
-        <%= render @view_module, @view_template, assigns %>
-      </main>
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu left">
+  <a href="#" class="header item">
+    <img class="logo" src="<%= static_path(@conn, "/images/logo.png") %>">
+    DIG UP
+  </a>
+  <a class="item" href="/sign_in">Login</a>
+  <a class="item">Signup</a>
+</div>
 
-    </div> <!-- /container -->
+
+
+<!-- Page Contents -->
+<div class="pusher">
+  <!--Begin Container-->
+            <div class="containerli">
+              <main role="main">
+                <%= render @view_module, @view_template, assigns %>
+              </main>
+            </div>
+            <!--Finish Container-->
+</div>
+
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
+
+
+<%
+info = get_flash(@conn, :info)
+error = get_flash(@conn, :error)
+warning = get_flash(@conn, :warning)
+%>
+<%= if info do %>
+  <script type="text/javascript">
+    $(function() {
+      alertify.success('<i class="close icon"></i><%= info %>')
+    });
+  </script>
+<% end %>
+<%= if error do %>
+  <script type="text/javascript">
+    $(function() {
+      alertify.error('<i class="close icon"></i><%= error %>')
+    });
+  </script>
+<% end %>
+<%= if warning do %>
+  <script type="text/javascript">
+    $(function() {
+      alertify.warning('<i class="close icon"></i><%= warning %>')
+    });
+  </script>
+<% end %>

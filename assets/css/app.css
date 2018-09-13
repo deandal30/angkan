@@ -1,1 +1,134 @@
-/* This file is for your main application css. */
+/* =============Login Page============ */
+.login {
+  background: #388e3d;
+  background: -moz-linear-gradient(top, #388e3d 0%, #429646 14%, #4fa053 29%, #5daa5f 43%, #6bb56e 57%, #79be7c 71%, #89c78b 85%, #9ad29c 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #388e3d), color-stop(14%, #429646), color-stop(29%, #4fa053), color-stop(43%, #5daa5f), color-stop(57%, #6bb56e), color-stop(71%, #79be7c), color-stop(85%, #89c78b), color-stop(100%, #9ad29c));
+  background: -webkit-linear-gradient(top, #388e3d 0%, #429646 14%, #4fa053 29%, #5daa5f 43%, #6bb56e 57%, #79be7c 71%, #89c78b 85%, #9ad29c 100%);
+  background: -o-linear-gradient(top, #388e3d 0%, #429646 14%, #4fa053 29%, #5daa5f 43%, #6bb56e 57%, #79be7c 71%, #89c78b 85%, #9ad29c 100%);
+  background: -ms-linear-gradient(top, #388e3d 0%, #429646 14%, #4fa053 29%, #5daa5f 43%, #6bb56e 57%, #79be7c 71%, #89c78b 85%, #9ad29c 100%);
+  background: linear-gradient(to bottom, #388e3d 0%, #429646 14%, #4fa053 29%, #5daa5f 43%, #6bb56e 57%, #79be7c 71%, #89c78b 85%, #9ad29c 100%); }
+
+.login .grid {
+  height: 100%; }
+
+.login .column {
+  max-width: 950px; }
+
+.login h3 {
+  font-weight: 500 !important;
+  letter-spacing: .5px; }
+
+.segment-radius {
+  border-radius: .65rem !important; }
+
+.plr_login {
+  padding-left: 12em !important;
+  padding-right: 12em !important; }
+
+/* =============Login Page============ */
+/* =============Authentication Pages Settings============ */
+/* =============Authentication Pages Settings============ */
+._descendantBG {
+  background-color: #000;
+  color: #fff;
+  background-image: url(https://edge.fscdn.org/assets/img/nlihp/1200/boyHoldingPhotov2-4477004acbb93fbb58d55d6f0bc6c234.jpg); }
+
+.hidden.menu {
+  display: none; }
+
+.masthead.segment {
+  min-height: 700px;
+  padding: 1em 0em; }
+
+.masthead .logo.item img {
+  margin-right: 1em; }
+
+.masthead .ui.menu .ui.button {
+  margin-left: 0.5em; }
+
+.masthead h1.ui.header {
+  margin-top: 3em;
+  margin-bottom: 0em;
+  font-size: 4em;
+  font-weight: normal; }
+
+.masthead h2 {
+  font-size: 1.7em;
+  font-weight: normal; }
+
+.ui.vertical.stripe {
+  padding: 8em 0em; }
+
+.ui.vertical.stripe h3 {
+  font-size: 2em; }
+
+.ui.vertical.stripe .button + h3,
+.ui.vertical.stripe p + h3 {
+  margin-top: 3em; }
+
+.ui.vertical.stripe .floated.image {
+  clear: both; }
+
+.ui.vertical.stripe p {
+  font-size: 1.33em; }
+
+.ui.vertical.stripe .horizontal.divider {
+  margin: 3em 0em; }
+
+.quote.stripe.segment {
+  padding: 0em; }
+
+.quote.stripe.segment .grid .column {
+  padding-top: 5em;
+  padding-bottom: 5em; }
+
+.footer.segment {
+  padding: 5em 0em; }
+
+.secondary.pointing.menu .toc.item {
+  display: none; }
+
+@media only screen and (max-width: 700px) {
+  .ui.fixed.menu {
+    display: none !important; }
+
+  .secondary.pointing.menu .item,
+  .secondary.pointing.menu .menu {
+    display: none; }
+
+  .secondary.pointing.menu .toc.item {
+    display: block; }
+
+  .masthead.segment {
+    min-height: 350px; }
+
+  .masthead h1.ui.header {
+    font-size: 2em;
+    margin-top: 1.5em; }
+
+  .masthead h2 {
+    margin-top: 0.5em;
+    font-size: 1.5em; } }
+/**
+ * Asset URL builder
+ * @access private
+ * @param {String} $type - Asset type, matching folder name
+ * @param {String} $file - Asset file name, including extension
+ * @return {URL} - A `url()` function leading to the asset
+ */
+/**
+ * Image asset helper
+ * @access public
+ * @param {String} $file - Asset file name, including extension
+ * @return {URL} - A `url()` function leading to the image
+ * @require {function} asset
+ */
+/**
+ * Font asset helper
+ * @access public
+ * @param {String} $file - Asset file name, including extension
+ * @return {URL} - A `url()` function leading to the font
+ * @require {function} asset
+ */
+
+/*# sourceMappingURL=app.css.map */

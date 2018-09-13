@@ -1,0 +1,38 @@
+
+<%= form_for @changeset, @action, fn f -> %>
+<h1 class="ui header">
+	Log in to Angkan
+</h1>
+<div class="content">
+	<div class="ui left aligned ptb-2">
+		<div class="field">
+			<label>Username or Email</label>
+			<div class="ui left icon input">
+				<i class="mail icon"></i>
+				<%= text_input f, :name, class: "form-control", placeholder: "Username or Email" %>
+					<%= error_tag f, :name %>
+			</div>
+		</div>
+		<div class="field">
+			<label>Password</label>
+			<div class="ui left icon input">
+				<i class="lock icon"></i>
+				<%= number_input f, :password, class: "form-control",  placeholder: "Password"  %>
+					<%= error_tag f, :password %>
+			</div>
+		</div>
+		<button class="ui large blue submit button" id="sign-up-button" type="submit">Login</button>
+	</div>
+	<div class="mt-2">
+		<p> Log in with </p>
+		<a class="ui left labeled icon blue submit button" href="/auth/facebook">
+			<i class="facebook icon"></i>
+			Facebook
+		</a>
+		<a class="ui left labeled icon red submit button" href="/auth/google?scope=email%20profile">
+			<i class="google icon"></i>
+			Google
+		</a>
+	</div>
+</div>
+  <% end %>
